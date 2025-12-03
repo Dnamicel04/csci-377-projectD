@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "Account.h"
 #include <iostream>
 
 template<typename A>
@@ -8,17 +8,18 @@ class DNode{
         // pointer to the next node
         DNode* next;
         // pointer to the previous node
-        DNode* prev
+        DNode* prev;
         // Person value
-        Person person;
+        Account person;// node
         // Constructor
-        DNode(const Person& p, DNode* n = nullptr, DNode* p = nullptr);
+        DNode(const Account& per, DNode* n = nullptr, DNode* p = nullptr);
 
     public:
         // number to keep track of how many accounts there are in the bank account
         static int activeNodes;
         // Destructor
         ~DNode();
-        
+     
+    friend class BankDLL<B>;
 
 };

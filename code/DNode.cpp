@@ -2,12 +2,13 @@
 #include "DNode.h"
 
 // Constructor implementation
-DNode::DNode(const Person& per, DNode* n , DNode* p)
-    : person(per), next(n), prev(p) {
+template<typename A>
+DNode<A>::DNode(const Account& per, DNode<A>* n , DNode<A>* p): person(per), next(n), prev(p) {
         activeNodes++;
     }
 
 // Destructor implementation
-DNode::~DNode() {
+template<typename A>
+DNode<A>::~DNode() {
     activeNodes--;
 }

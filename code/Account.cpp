@@ -1,8 +1,14 @@
 #include "Account.h"
 #include <iostream>
-
 // Empty constructor
-Account::Account(){}
+Account::Account() {
+srand(time(0)); 
+ name = " ";
+ accNum = (std::rand() % 100) + 10; // random id # from 10 - 99
+ total = 0.0;
+ checking= 0.0; 
+ savings = 0.0; 
+}
 
 // Destructor (if needed)
 Account::~Account(){}
@@ -10,7 +16,7 @@ Account::~Account(){}
 // Constructor
 Account::Account(std::string newName, int newAccNum, double newCheck, double newSavings){
     setName(newName);
-    setAccNum(newAccNum);
+    setAccNum(newAccNum); // if accNum isn't double digit, to say invalid?
     setChecking(newCheck);
     setSavings(newSavings);
 }
@@ -20,6 +26,7 @@ std::string Account::getName() const{
 }
 
 int Account::getAccNum() const {
+
     return accNum;
 }
 

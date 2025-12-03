@@ -1,11 +1,14 @@
 // Account.h
+//what the value part of the node is 
 #include <iostream>
-
+#include <ctime>
+#include <cstdlib>
 class Account{
 
 	private:
+	   
 		std::string name;
-		int accNum;
+		int accNum ; 
 		double total; // user's total amount
 		double checking; 
 		double savings;
@@ -27,6 +30,9 @@ class Account{
 		void setChecking(double newCheck);
 		void setSavings(double newSavings);
 
+      /* deposit and withdrawl  methods go here, ask w. bool  */
+	  /*saveOrCheck for which account to perform operation*/
+	  // true: savings, false: checking
 		void printPerson();
 
 };
